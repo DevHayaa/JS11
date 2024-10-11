@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        img {
+            width: 400px;
+            height: 300px;
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 <body>
 
@@ -51,8 +58,16 @@
     first picture on mouseout. -->
 
 
-   <img onmouseout="src='https://miro.medium.com/v2/resize:fit:1400/1*pzbYin_gqDNVjOSLQs06NQ.jpeg'" onmouseover="src='https://gifdb.com/images/high/dora-498-x-379-gif-ithzlz8esaum9rnv.gif'" src="https://miro.medium.com/v2/resize:fit:1400/1*pzbYin_gqDNVjOSLQs06NQ.jpeg" alt="">
+    <img id="myImage" 
+         src="https://m.media-amazon.com/images/S/pv-target-images/95d8bc8a1b90b3f592156e1b98e099b468180bf59c5d5d7f9d0ac5c0a92d34ea._SX1080_FMjpg_.jpg" 
+         alt="First Image" 
+         onmouseover="changeImage()" 
+         onmouseout="resetImage()">
 
+
+         <div id="counterValue">0</div>
+         <button onclick="increaseCounter()">Increase</button>
+         <button onclick="decreaseCounter()">Decrease</button>
 
 <script src="app.js"></script>
 </body>
